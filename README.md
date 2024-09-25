@@ -1,40 +1,19 @@
-Cahier des charges
-
-Projet : Monitoring et hacking WiFi et Bluetooth
-
-Contexte :
-
-Le projet se déroule dans la continuité d'un TP WiFi visant à analyser et visualiser les trames circulant entre un point d’accès (AP) et une carte réseau WiFi. L'objectif est d'étendre cette analyse par l'étude de diverses attaques telles que la déauthentification, la désassociation ou encore l'interception de mot de passe, tout en évitant tout impact sur le réseau de l'établissement en effectuant ces opérations sur un réseau local sécurisé.
+Sujet n°6 – Monitoring et hacking WiFi et Bluetooth
 
 
-Objectifs :
+Lors de l’un des TP WiFi, vous aurez l’occasion de visualiser les trames WiFi qui circulent entre un point d’accès et une carte réseau WiFi. La suite logique de ce TP serait de procéder à des tentatives d’attaque (déauthentification, désassociation, interception de mot de passe, etc….). Mais d’une part, le TP est déjà très complet, et d’autre part, cela peut avoir des conséquences si le sujet n’est pas suivi
+scrupuleusement (si on faisait ça sur le réseau de l’IUT au lieu de le faire sur un réseau local). Comme pour d’autres manipulations, l’idée est d’intercepter les trames émises, en filaire, à l’aide de la radiologicielle (en reliant le connecteur d’antenne du point d’accès à la clé SDR). Dans la pratique, on utilisera un Adalm Pluto car la bande passante sera plus importante qu’une clé SDR.
 
-Le projet est divisé en deux parties principales : 
-L'analyse du protocole WiFi suivie d'une étude sur le protocole Bluetooth si le temps restant le permet.
+Ainsi, il faudra:
 
+- Visualiser le spectre WiFi via l’adalm PLuto
 
-Partie 1 : Analyse WiFi
+- Parvenir à visualiser les trames qui circulent via l’adalm Pluto, sur Wireshark (pour cette étape, on pourra rester en WiFi).
 
-Interception et analyse des trames WiFi avec Wireshark :
-Identification des trames échangées entre un point d’accès et des clients.
-Capturer et observer ces trames dans Wireshark.
+- Testez le bon fonctionnement en filaire.
 
-Test en filaire :
+- Envoyez différentes trames pour déauthentifier un client, obtenir son mot de passe, etc…
+  
+- Observez sous Wireshark l’influence de ces trames.
 
-Vérification du bon fonctionnement en filaire (connexion directe entre le point d'accès et l'outil de capture).
-Comparaison des résultats par rapport à une capture sans fil.
-
-Simulations d'attaques WiFi :
-
-Envoi de trames spécifiques pour simuler des attaques, telles que :
-Déauthentification d'un client.
-Interception de données ou de mots de passe.
-Observation et analyse des impacts sur le réseau via Wireshark (modification de flux, réactions du réseau).
-
-Partie 2 : Analyse Bluetooth (si temps restant)
-
-Visualisation des trames Bluetooth :
-
-Capture des trames Bluetooth à différentes étapes du processus d’association.
-Analyse et visualisation des trames sous Wireshark.
-
+- Suivant le temps qu’il restera, on pourra ensuite étudier le protocole Bluetooth, en visualisant les trames sous Wireshark aux différentes étapes de l’association
