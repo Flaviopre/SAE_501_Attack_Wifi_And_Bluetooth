@@ -59,13 +59,21 @@ Si le temps le permet, les trames Bluetooth sont également analysées à diffé
 Planification :
 
 Étape 1 : Mise en place du cahier des charges.
+
 Étape 2 : Fabrication du schéma fontionnel. 
+
 Étape 3 : Recherche des différentes attaques.
+
 Etape 4 : Mise en place d'un schéma Réseau de Lab/Test
-Etape 5 : Installation des différents outils utilisés (Wireshark, airmon....)
+
+Etape 5 : Installation des différents outils utilisés (Wireshark, airmon....).
+
 Étape 6 : Visualisation des trames WiFi et test en filaire.
+
 Étape 7 : Simulations d'attaques WiFi et analyse sous Wireshark.
+
 Étape 8 : Mise en place d'une maquette.
+
 Étape 8 : Étude Bluetooth (si le temps le permet).
 
 
