@@ -38,3 +38,26 @@ Partie 2 : Analyse Bluetooth (si temps restant)
 Visualisation des trames Bluetooth :
 Capture des trames Bluetooth à différentes étapes du processus d’association.
 Analyse et visualisation des trames sous Wireshark.
+
+Contraintes :
+
+
+Sécurité :
+
+Toutes les opérations devront être effectuées sur un réseau local sécurisé et isolé afin d’éviter tout impact sur les réseaux de l’établissement.
+Respect des règles d'éthique informatique, les actions de hacking ne doivent pas avoir lieu en dehors de l'environnement de test sécurisé.
+
+Matériel :
+
+Utilisation de Wireshark pour l’analyse et la visualisation des trames.
+
+Risques et précautions :
+
+
+Interférence réseau :
+
+Le réseau local devra être correctement isolé pour éviter tout dommage sur le réseau de l’établissement.
+
+Compétences techniques :
+
+Le projet requiert une bonne connaissance des protocoles WiFi et Bluetooth ainsi que de l’outil Wireshark
