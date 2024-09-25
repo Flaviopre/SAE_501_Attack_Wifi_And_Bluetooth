@@ -8,7 +8,9 @@ Le projet se déroule dans la continuité d'un TP WiFi visant à analyser et vis
 
 
 Objectifs :
-Le projet est divisé en deux parties principales : l'analyse du protocole WiFi suivie d'une étude sur le protocole Bluetooth si le temps restant le permet.
+
+Le projet est divisé en deux parties principales : 
+L'analyse du protocole WiFi suivie d'une étude sur le protocole Bluetooth si le temps restant le permet.
 
 
 Partie 1 : Analyse WiFi
