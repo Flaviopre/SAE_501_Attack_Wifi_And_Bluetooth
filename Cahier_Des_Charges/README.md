@@ -57,6 +57,7 @@ Présentation d'une maquette avec tests de différentes attaques.
 Si le temps le permet, les trames Bluetooth sont également analysées à différents niveaux d’association.
 
 Planification :
+
 Étape 1 : Mise en place du cahier des charges.
 Étape 2 : Fabrication du schéma fontionnel. 
 Étape 3 : Recherche des différentes attaques.
