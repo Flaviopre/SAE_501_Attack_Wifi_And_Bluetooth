@@ -8,9 +8,12 @@ WPA2 (Wi-Fi Protected Access II) est une norme de sécurité pour les réseaux W
 ### 2. Préparation de l'attaque avec Wifite
 Wifite est un outil de ligne de commande conçu pour automatiser le processus de craquage des réseaux Wi-Fi. Avant de lancer l'attaque, il est nécessaire de :
 - Configurer une interface Wi-Fi en mode moniteur pour écouter les réseaux Wi-Fi environnants. Cela signifie que la carte réseau doit être capable d'intercepter les paquets qui circulent sur le réseau. Wifite va pouvoir le faire tout seul lorsque nous lancons la commande qui va avec wifivite :
-![image](https://github.com/user-attachments/assets/723a7c8f-3a2e-46aa-a3f8-a62850df899f)
-
+ 
 - Identifier le réseau cible en utilisant des outils comme Airodump-ng, intégré dans Wifite, qui analyse les réseaux disponibles et identifie les points d’accès (SSID) et leur niveau de sécurité (WEP, WPA, WPA2).
+
+Wifite va pouvoir le faire tout seul lorsque nous lancons la commande qui va avec wifivite :
+
+![image](https://github.com/user-attachments/assets/6cc7ea31-69c6-4400-bc9b-99d27b8c8ded)
 
 ### 3. Capture du Handshake WPA2
 La phase cruciale de l'attaque consiste à capturer le handshake WPA2, qui est un échange de clés entre le routeur et un périphérique client lorsqu’une connexion est établie. Wifite effectue cette opération en :
