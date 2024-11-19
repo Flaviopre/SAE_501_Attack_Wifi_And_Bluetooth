@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/76ce15b9-a52c-490a-9e8d-423fb766c357)Attaque de Cracking WPA2 Password avec Wifinvite
+Attaque de Cracking WPA2 Password avec Wifinvite
 
 L’attaque de cracking de mot de passe WPA2, qui est l’une des méthodes de sécurisation des réseaux Wi-Fi les plus courantes, consiste à récupérer le mot de passe du réseau pour y accéder sans autorisation. Dans ce cadre, l'outil Wifite est fréquemment utilisé, car il permet d’automatiser le processus de recherche et de craquage des réseaux Wi-Fi protégés par WPA/WPA2, WEP, et d'autres protocoles de sécurité. Cette attaque comporte plusieurs étapes techniques précises, que je vais détailler ici.
 
