@@ -74,9 +74,13 @@ Une fois le handshake capturé, l'étape suivante est de tester des mots de pass
 - Attaque par dictionnaire : Wifite utilise un fichier de mots de passe prédéfini (fichier de dictionnaire) et teste chaque mot de passe pour voir s’il correspond à celui du handshake. Cette approche est rapide si le mot de passe est simple ou fait partie des mots de passe courants.
 - Attaque par force brute : Cette approche consiste à tester toutes les combinaisons possibles jusqu’à trouver la bonne. Elle est bien plus longue et rarement efficace pour des mots de passe forts ou complexes, mais elle peut réussir pour des mots de passe courts ou peu complexes.
 
+On voit ici la détection et capture du Handshake WPA : Le processus indique que le fichier de handshake a été détecté et capturé : Fichier hs/handshake_APAATTAQUER_C0-56-27-73-35-B8_2024-11-14T16-21-53.cap. Ce fichier contient les données essentielles pour l’analyse et une potentielle attaque par dictionnaire. Validation du Handshake : Les informations du réseau cible sont affichées : Nom du point d’accès (SSID) : AP_A_ATTAQUER. BSSID (adresse MAC) : C0:56:27:73:35
+
+Chiffrement utilisé : WPA. Cela confirme que le handshake est valide et que les outils peuvent être utilisés pour le craquage.
+Craquage du mot de passe : La tentative de craquage utilise aircrack-ng qui utilise une wordlist contenant des centaines de mot de passe probables pour le point d'accès nommée wordlist-probable.txt, testant un grand nombre de mots de passe à une vitesse de 38 613,6 clés/seconde. Le mot de passe est trouvé : password. Le résultat est sauvegardé dans un fichier nommé cracked.json.
 
 ### 5. Analyse des résultats et connexion au réseau
-Si un mot de passe correspondant est trouvé, l’attaquant peut alors utiliser ce mot de passe pour se connecter au réseau Wi-Fi ciblé. 
+Le mot de passe trouvé est donc password ce qui montre bien la réussite de l'attaque mais aussi ça limite. 
 
 ### Limitations et Contre-Mesures de Sécurité
 Bien que l'attaque par Wifite et d’autres outils similaires soit possible, elle présente des limitations, notamment si :
