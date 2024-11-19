@@ -58,28 +58,22 @@ La phase cruciale de l'attaque consiste à capturer le handshake WPA2, qui est u
 
 1. Forçant la déconnexion d’un périphérique déjà connecté (attaque de de-authentication), ce qui oblige l’appareil à se reconnecter. Cette étape se fait généralement via une attaque de-auth qui envoie des paquets de désauthentification pour forcer un périphérique à quitter temporairement le réseau.
 2. Lors de la reconnexion du périphérique, Wifite peut capturer le handshake. Cette capture est essentielle, car elle contient des informations codées (en hachage) sur le mot de passe.
-
 Le handshake ne donne pas directement le mot de passe, mais il est nécessaire pour le processus de déchiffrement ultérieur.
-
-### 4. Déchiffrement du Handshake via des attaques par dictionnaire ou brute force
-Une fois le handshake capturé, l'étape suivante est de tester des mots de passe jusqu'à trouver le bon. Cela peut se faire de deux manières principales :
-- Attaque par dictionnaire : Wifite utilise un fichier de mots de passe prédéfini (fichier de dictionnaire) et teste chaque mot de passe pour voir s’il correspond à celui du handshake. Cette approche est rapide si le mot de passe est simple ou fait partie des mots de passe courants.
-- Attaque par force brute : Cette approche consiste à tester toutes les combinaisons possibles jusqu’à trouver la bonne. Elle est bien plus longue et rarement efficace pour des mots de passe forts ou complexes, mais elle peut réussir pour des mots de passe courts ou peu complexes.
 
 ![image](https://github.com/user-attachments/assets/2b7419b6-8f20-448e-be70-b761b0f97043)
 Sur cette capture, nous voyons différentes choses. Wifite tente de capturer le PMKID (Pairwise Master Key Identifier), une méthode d'attaque rapide si le réseau le supporte.
-Le message "Waiting for PMKID" indique que Wifite écoute les paquets pour tenter de récupérer cette clé. Mais on utilisera pas cette attaque, on l'interrompera donc. On utilisera par la suite le Capture de Handshake WPA. On voit sur la capture que le Handshake est détecté : Wifite détecte un nouveau client connecté au réseau : 62:9A:EE:EA:C7:30. Cet événement permet de capturer le handshake WPA, une étape critique pour le craquage des mots de passe. Le message "Captured handshake" confirme que le handshake a été obtenu avec succès.
-
-Wifite enregistre une copie du handshake dans un fichier .cap nommé : hs/handshake_APAATTAQUER_C0-56-27-73-35-B8_2024-11-14T16-21-53.cap
-
-Ce fichier contient les informations nécessaires pour une attaque par force brute ou par dictionnaire.
-
-Wifite utilise trois outils pour valider l'authenticité du handshake :
+Le message "Waiting for PMKID" indique que Wifite écoute les paquets pour tenter de récupérer cette clé. Mais on utilisera pas cette attaque, on l'interrompera donc. On utilisera par la suite le Capture de Handshake WPA. On voit sur la capture que le Handshake est détecté : Wifite détecte un nouveau client connecté au réseau : 62:9A:EE:EA:C7:30. Cet événement permet de capturer le handshake WPA, une étape critique pour le craquage des mots de passe. Le message "Captured handshake" confirme que le handshake a été obtenu avec succès. Wifite enregistre une copie du handshake dans un fichier .cap nommé : hs/handshake_APAATTAQUER_C0-56-27-73-35-B8_2024-11-14T16-21-53.cap. Ce fichier contient les informations nécessaires pour une attaque par force brute ou par dictionnaire. 
+Wifite utilise trois outils pour valider l'authenticité du handshake : 
 Tshark : Confirme que le fichier .cap contient un handshake valide pour C0:56:27:73:35
 Cowpatty : Indique également que le handshake est valide.
 Aircrack-ng : Valide le handshake pour l'AP AP_A_ATTAQUER.
 Cela garantit que le fichier est utilisable pour une tentative de craquage.
 
+### 4. Déchiffrement du Handshake via des attaques par dictionnaire ou brute force
+Une fois le handshake capturé, l'étape suivante est de tester des mots de passe jusqu'à trouver le bon. Cela peut se faire de deux manières principales :
+- Attaque par dictionnaire : Wifite utilise un fichier de mots de passe prédéfini (fichier de dictionnaire) et teste chaque mot de passe pour voir s’il correspond à celui du handshake. Cette approche est rapide si le mot de passe est simple ou fait partie des mots de passe courants.
+- Attaque par force brute : Cette approche consiste à tester toutes les combinaisons possibles jusqu’à trouver la bonne. Elle est bien plus longue et rarement efficace pour des mots de passe forts ou complexes, mais elle peut réussir pour des mots de passe courts ou peu complexes.
+  
 ### 5. Analyse des résultats et connexion au réseau
 Si un mot de passe correspondant est trouvé, l’attaquant peut alors utiliser ce mot de passe pour se connecter au réseau Wi-Fi ciblé. 
 
