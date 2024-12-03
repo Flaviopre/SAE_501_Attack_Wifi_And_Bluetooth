@@ -131,6 +131,9 @@ service apache2 start
 ![image](https://github.com/user-attachments/assets/0af1bac3-c1b2-40b1-8e3b-f257ad4a9f9e)
 
 ### 5. **Phase de Test**
+Dans cette phase, nous allons tester l’efficacité et le bon fonctionnement de notre configuration. Cela inclut la connexion à notre point d'accès Wi-Fi, qui redirigera automatiquement les utilisateurs vers le portail captif configuré grâce à Apache. Une fois connecté, l'utilisateur sera invité à saisir ses identifiants (login et mot de passe) sur la page clonée du portail. Ces informations seront ensuite récupérées et enregistrées pour analyse. Cette étape permet de vérifier non seulement la redirection correcte vers le portail captif, mais également la capture des données d'authentification transmises par l'utilisateur.
+
+---
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
