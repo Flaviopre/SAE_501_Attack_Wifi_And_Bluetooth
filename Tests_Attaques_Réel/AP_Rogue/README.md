@@ -80,6 +80,10 @@ L'éxécution de ces commandes ce feront dans une machine Parrot OS. Il est impo
 ![image](https://github.com/user-attachments/assets/7d8ff656-5782-4c27-93e8-ef286a9bb13b)
 
 Il faut évidemment une fois ceci configuré, mettre l'adresse de notre interface sans fil en 192.168.1.1 afin de spécifier que notre point d'accès est l'interface de notre attaquant et que toutes les requêtes viennent à notre machine.
+```bash
+ifconfig wlp6s0 192.168.1.1/24
+```
+![image](https://github.com/user-attachments/assets/21dde581-3a47-4fa3-a1b2-b6e10eabf026)
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
