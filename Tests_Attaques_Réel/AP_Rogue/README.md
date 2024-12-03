@@ -86,8 +86,7 @@ ifconfig wlp6s0 192.168.1.1/24
 ```
 ![image](https://github.com/user-attachments/assets/21dde581-3a47-4fa3-a1b2-b6e10eabf026)
 
----
-### 3.3 **Configurer Apache2 pour héberger la page clonée**
+#### 3.3 **Configurer Apache2 pour héberger la page clonée**
 
 #### **Configuration rajouté du fichier 000-default.conf**
 Le fichier 000-default.conf est un fichier de configuration par défaut pour Apache. Il définit un VirtualHost de base qui sert les fichiers du répertoire /var/www/html sur le port HTTP (80).
