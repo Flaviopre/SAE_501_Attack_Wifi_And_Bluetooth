@@ -12,6 +12,9 @@ Wifite est un outil de ligne de commande conçu pour automatiser le processus de
 - Identifier le réseau cible en utilisant des outils comme Airodump-ng, intégré dans Wifite, qui analyse les réseaux disponibles et identifie les points d’accès (SSID) et leur niveau de sécurité (WEP, WPA, WPA2).
 
 Wifite va pouvoir le faire tout seul lorsque nous lancons la commande qui va avec wifivite :
+```bash
+wifivite
+```
 ![image](https://github.com/user-attachments/assets/cb0f8aa6-7311-4d89-9b01-053a25a21e23)
 Lors du lancement, on peut voir différentes choses s'afficher nottament l'interface Wifi que nous allons utilisé comme interface de monitoring qui va inspecter le traffic afin de voir ce qu'il se passe sur le réseau. Wifite nécessite le mode moniteur pour capturer des paquets et interagir avec les réseaux sans fil. Les caractéristiques de notre interface réseau sont donc bien celles-ci : 
 
