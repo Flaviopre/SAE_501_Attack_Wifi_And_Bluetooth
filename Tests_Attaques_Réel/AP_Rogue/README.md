@@ -133,6 +133,12 @@ service apache2 start
 ### 5. **Phase de Test**
 Dans cette phase, nous allons tester l’efficacité et le bon fonctionnement de notre configuration. Cela inclut la connexion à notre point d'accès Wi-Fi, qui redirigera automatiquement les utilisateurs vers le portail captif configuré grâce à Apache. Une fois connecté, l'utilisateur sera invité à saisir ses identifiants (login et mot de passe) sur la page clonée du portail. Ces informations seront ensuite récupérées et enregistrées pour analyse. Cette étape permet de vérifier non seulement la redirection correcte vers le portail captif, mais également la capture des données d'authentification transmises par l'utilisateur.
 
+On essayera de se connecter sur le wifi avec un PC de Test et on verra si cela redirige vers le portail captif :
+![image](https://github.com/user-attachments/assets/4e8d2ac7-819d-4428-90dd-f3b88df13ef4)
+
+Puis, on verra la présence du portail captif correspondant : 
+![image](https://github.com/user-attachments/assets/28917768-47af-4030-8d68-efbcbada3fd9)
+
 ---
 
 ### 5. **Exploitation des données**
