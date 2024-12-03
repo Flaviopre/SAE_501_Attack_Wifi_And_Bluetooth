@@ -77,6 +77,7 @@ Lancer hostapd avec la commande suivante :
 hostapd hostapd.conf -B
 ```
 L'éxécution de ces commandes ce feront dans une machine Parrot OS. Il est important d'exécuter **dnsmasq** avant **hostapd** pour assurer un fonctionnement optimal du point d'accès Wi-Fi. **Dnsmasq** configure les services DHCP et DNS, permettant aux clients de recevoir une adresse IP et de résoudre les noms de domaine une fois connectés. Si **hostapd** est exécuté en premier, les clients pourront se connecter au point d'accès, mais ils ne recevront pas d'adresse IP ni de service DNS, rendant leur connexion inutilisable jusqu'à ce que **dnsmasq** soit démarré. L'ordre garantit ainsi une expérience réseau fluide pour les utilisateurs connectés.
+
 ![image](https://github.com/user-attachments/assets/7d8ff656-5782-4c27-93e8-ef286a9bb13b)
 
 Il faut évidemment une fois ceci configuré, mettre l'adresse de notre interface sans fil en 192.168.1.1 afin de spécifier que notre point d'accès est l'interface de notre attaquant et que toutes les requêtes viennent à notre machine.
