@@ -104,7 +104,7 @@ Clonage des ressources : httcrack télécharge également toutes les ressources 
 Enregistrement local : Toutes les données sont enregistrées dans le répertoire /var/www/html (ou un autre répertoire que vous spécifiez), permettant de servir la page clonée aux utilisateurs lorsqu'ils se connectent au Rogue AP.
 
 #### **Exécution de la commande**
-On commencera par se rendre dans le dossier où se trouve les fichiers HTML et on clonera directement dans le dossier. On prendra une page de connexion de l'IUT disponible directement sur Internet. 
+On commencera par se rendre dans le dossier où se trouve les fichiers HTML et on clonera directement dans le dossier. On prendra une page de connexion de l'IUT disponible directement sur Internet. Les pages seront collectées et stockées sur le 
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
