@@ -1,4 +1,6 @@
-L’**attaque du Rogue Access Point** (point d'accès malveillant) est une méthode courante dans le domaine des tests d'intrusion réseau et de la cybersécurité. Elle vise à créer un faux point d’accès Wi-Fi imitant un réseau légitime, dans le but de piéger les utilisateurs en les incitant à se connecter. Une fois connectés, leurs données sensibles, telles que les identifiants ou mots de passe, peuvent être interceptées. Voici comment ce type d’attaque est réalisé et analysé, en utilisant les ressources disponibles sur le dépôt GitHub mentionné.
+Rogue Access Point avec hostapd
+
+L’attaque du Rogue Access Point (point d'accès malveillant) est une méthode courante dans le domaine des tests d'intrusion réseau et de la cybersécurité. Elle vise à créer un faux point d’accès Wi-Fi imitant un réseau légitime, dans le but de piéger les utilisateurs en les incitant à se connecter. Une fois connectés, leurs données sensibles, telles que les identifiants ou mots de passe, peuvent être interceptées. Voici comment ce type d’attaque est réalisé et analysé, en utilisant les ressources disponibles sur le dépôt GitHub mentionné.
 
 ---
 
