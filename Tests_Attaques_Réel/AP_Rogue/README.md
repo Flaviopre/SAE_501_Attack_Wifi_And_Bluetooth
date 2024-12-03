@@ -131,7 +131,7 @@ service apache2 start
 ```
 ![image](https://github.com/user-attachments/assets/0af1bac3-c1b2-40b1-8e3b-f257ad4a9f9e)
 
-### 6. **Phase de Test**
+### 5. **Phase de Test**
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
