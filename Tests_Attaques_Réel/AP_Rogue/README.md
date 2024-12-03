@@ -33,7 +33,7 @@ Un **Rogue Access Point** (Point d'accès malveillant) exploite la confiance des
 
 ---
 ### 3. **Mise en place du Rogue Access Point**
-#### **Configuration de dnsmasq :**
+#### 3.1 **Configuration de dnsmasq :**
 Configurer **dnsmasq** pour gérer le DHCP et le DNS. Créer un fichier de configuration (`dnsmasq.conf`) :
 ```ini
 interface=wlp6s0
@@ -50,7 +50,7 @@ Démarrer dnsmasq :
 sudo dnsmasq -C dnsmasq.conf
 ```
 
-#### **Configuration de hostapd :**
+#### 3.2 **Configuration de hostapd :**
 Créer un fichier de configuration pour **hostapd** (`hostapd.conf`) :
 ```ini
 #Configuration de l'interface sans-fil 
@@ -87,7 +87,7 @@ ifconfig wlp6s0 192.168.1.1/24
 ![image](https://github.com/user-attachments/assets/21dde581-3a47-4fa3-a1b2-b6e10eabf026)
 
 ---
-### 5. **Configurer Apache2 pour héberger la page clonée**
+### 3.3 **Configurer Apache2 pour héberger la page clonée**
 
 #### **Configuration rajouté du fichier 000-default.conf**
 Le fichier 000-default.conf est un fichier de configuration par défaut pour Apache. Il définit un VirtualHost de base qui sert les fichiers du répertoire /var/www/html sur le port HTTP (80).
@@ -119,7 +119,7 @@ Cette redirection est permanente (code 301) et interrompt le traitement des règ
 
 Enfin, les journaux des accès et des erreurs sont enregistrés dans les fichiers configurés via ${APACHE_LOG_DIR}, ce qui permet de surveiller l’activité du serveur et de diagnostiquer les problèmes. Cette configuration est conçue pour offrir une gestion des URL propre et cohérente tout en améliorant l’expérience utilisateur.
 
-#### **Activation du module HTTP et redémarrage d'Apache**
+#### 3.4 **Activation du module HTTP et redémarrage d'Apache**
 L'activation du module `mod_rewrite` via la commande `a2enmod rewrite` est indispensable pour permettre l'application des règles de réécriture et de redirection d'URL configurées dans le fichier `000-default.conf` ou dans un fichier `.htaccess`. 
 
 Ces règles, comme la suppression du préfixe `www.` ou la gestion des requêtes vers des fichiers inexistants, ne fonctionneront pas sans ce module. De plus, après toute modification des fichiers de configuration ou activation d’un module, il est nécessaire de redémarrer le service Apache avec `service apache2 start` pour que les modifications soient prises en compte et que le serveur puisse correctement appliquer les nouvelles configurations.
@@ -130,6 +130,8 @@ a2enmod rewrite
 service apache2 start
 ```
 ![image](https://github.com/user-attachments/assets/0af1bac3-c1b2-40b1-8e3b-f257ad4a9f9e)
+
+### 6. **Phase de Test**
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
