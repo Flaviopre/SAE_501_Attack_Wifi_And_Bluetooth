@@ -86,25 +86,49 @@ ifconfig wlp6s0 192.168.1.1/24
 ![image](https://github.com/user-attachments/assets/21dde581-3a47-4fa3-a1b2-b6e10eabf026)
 
 ---
-### 4. **Clonage d'une page de connexion avec httcrack**
+### 5. **Configurer Apache2 pour héberger la page clonée**
 
-#### **Cloner la page de connexion avec httcrack**
-Utilisez la commande suivante pour cloner une page de connexion légitime à partir de l'URL spécifiée. Cela téléchargera le contenu de la page ainsi que ses ressources associées (comme les images, les fichiers CSS, etc.) et les enregistrera dans un répertoire local.
+#### **Configuration rajouté du fichier 000-default.conf**
+Le fichier 000-default.conf est un fichier de configuration par défaut pour Apache. Il définit un VirtualHost de base qui sert les fichiers du répertoire /var/www/html sur le port HTTP (80).
 
-```bash
-sudo httcrack http://legitimate-website.com/login -o /var/www/html
+```ini
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+<Directory "/var/www/html">
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ / [L,QSA]
+</Directory>
 ```
+Ce fichier de configuration Apache définit un hôte virtuel pour le port 80 (HTTP) avec une racine de document située dans le répertoire /var/www/html. Il utilise le module mod_rewrite pour activer des règles de réécriture permettant de manipuler et de rediriger les requêtes entrantes. 
 
-http://legitimate-website.com/login : L'URL de la page de connexion légitime que vous voulez cloner. Cela pourrait être, par exemple, une page de connexion pour un réseau Wi-Fi public ou un service en ligne.
--o /var/www/html : Cette option indique à httcrack où sauvegarder les fichiers clonés (dans ce cas, le répertoire /var/www/html, qui est le répertoire par défaut pour Apache sur un système Linux). Cela permet de servir la page clonée à partir de votre serveur local.
+Une première règle détecte les URL contenant le sous-domaine www. à l’aide de la condition RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC] et les redirige automatiquement vers leur version sans www. grâce à une règle de réécriture RewriteRule ^(.*)$ http://%1/$1 [R=301,L]. 
 
-#### **Que fait httcrack avec cette commande ?**
-Téléchargement de la page : httcrack récupère le fichier HTML de la page de connexion de l'URL spécifiée.
-Clonage des ressources : httcrack télécharge également toutes les ressources associées à la page, comme les images, les fichiers CSS et les scripts JavaScript, pour rendre la page exactement comme l'originale.
-Enregistrement local : Toutes les données sont enregistrées dans le répertoire /var/www/html (ou un autre répertoire que vous spécifiez), permettant de servir la page clonée aux utilisateurs lorsqu'ils se connectent au Rogue AP.
+Cette redirection est permanente (code 301) et interrompt le traitement des règles suivantes après son exécution. Une autre règle gère les fichiers ou répertoires manquants : si le fichier ou le dossier demandé n'existe pas, les conditions RewriteCond %{REQUEST_FILENAME} !-f et RewriteCond %{REQUEST_FILENAME} !-d déclenchent une redirection vers la racine (/), ce qui est utile pour les applications web monopage ou les pages d'erreur personnalisées. 
 
-#### **Exécution de la commande**
-On commencera par se rendre dans le dossier où se trouve les fichiers HTML et on clonera directement dans le dossier. On prendra une page de connexion de l'IUT disponible directement sur Internet. Les pages seront collectées et stockées sur le 
+Enfin, les journaux des accès et des erreurs sont enregistrés dans les fichiers configurés via ${APACHE_LOG_DIR}, ce qui permet de surveiller l’activité du serveur et de diagnostiquer les problèmes. Cette configuration est conçue pour offrir une gestion des URL propre et cohérente tout en améliorant l’expérience utilisateur.
+
+#### **Activation du module HTTP et redémarrage d'Apache**
+L'activation du module `mod_rewrite` via la commande `a2enmod rewrite` est indispensable pour permettre l'application des règles de réécriture et de redirection d'URL configurées dans le fichier `000-default.conf` ou dans un fichier `.htaccess`. 
+
+Ces règles, comme la suppression du préfixe `www.` ou la gestion des requêtes vers des fichiers inexistants, ne fonctionneront pas sans ce module. De plus, après toute modification des fichiers de configuration ou activation d’un module, il est nécessaire de redémarrer le service Apache avec `service apache2 start` pour que les modifications soient prises en compte et que le serveur puisse correctement appliquer les nouvelles configurations.
+
+On fera cela grâce aux commandes : 
+```bash
+a2enmod rewrite
+service apache2 start
+```
+![image](https://github.com/user-attachments/assets/0af1bac3-c1b2-40b1-8e3b-f257ad4a9f9e)
 
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
