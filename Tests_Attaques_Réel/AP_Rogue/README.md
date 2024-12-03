@@ -85,6 +85,27 @@ ifconfig wlp6s0 192.168.1.1/24
 ```
 ![image](https://github.com/user-attachments/assets/21dde581-3a47-4fa3-a1b2-b6e10eabf026)
 
+---
+### 4. **Clonage d'une page de connexion avec httcrack**
+
+#### **Cloner la page de connexion avec httcrack**
+Utilisez la commande suivante pour cloner une page de connexion légitime à partir de l'URL spécifiée. Cela téléchargera le contenu de la page ainsi que ses ressources associées (comme les images, les fichiers CSS, etc.) et les enregistrera dans un répertoire local.
+
+```bash
+sudo httcrack http://legitimate-website.com/login -o /var/www/html
+```
+
+http://legitimate-website.com/login : L'URL de la page de connexion légitime que vous voulez cloner. Cela pourrait être, par exemple, une page de connexion pour un réseau Wi-Fi public ou un service en ligne.
+-o /var/www/html : Cette option indique à httcrack où sauvegarder les fichiers clonés (dans ce cas, le répertoire /var/www/html, qui est le répertoire par défaut pour Apache sur un système Linux). Cela permet de servir la page clonée à partir de votre serveur local.
+
+#### **Que fait httcrack avec cette commande ?**
+Téléchargement de la page : httcrack récupère le fichier HTML de la page de connexion de l'URL spécifiée.
+Clonage des ressources : httcrack télécharge également toutes les ressources associées à la page, comme les images, les fichiers CSS et les scripts JavaScript, pour rendre la page exactement comme l'originale.
+Enregistrement local : Toutes les données sont enregistrées dans le répertoire /var/www/html (ou un autre répertoire que vous spécifiez), permettant de servir la page clonée aux utilisateurs lorsqu'ils se connectent au Rogue AP.
+
+#### **Exécution de la commande**
+On commencera par se rendre dans le dossier où se trouve les fichiers HTML et on clonera directement dans le dossier. On prendra une page de connexion de l'IUT disponible directement sur Internet. 
+
 ### 5. **Exploitation des données**
 Une fois les utilisateurs connectés au Rogue Access Point :
 - Les identifiants saisis sur la page malveillante sont enregistrés.
