@@ -66,10 +66,7 @@ Le script exécute cette commande en arrière-plan avec `subprocess.Popen`.
 ---
 
 ## 4. Phase de test
-1. Exécutez le script avec les privilèges `sudo`.  
-2. Sélectionnez l'interface Wi-Fi.  
-3. Attendez que les réseaux disponibles soient affichés, puis choisissez le réseau cible.  
-4. Vérifiez que les clients du réseau cible sont déconnectés en continu.  
+Sur notre machine attaquante, nous allons lancer le script python en Super Utilisateur afin que le fichier aient tous les droits sur notre machine et puisse faire ce qu'il veut. Pour l'interface choisie, nous utiliserons celle de base qui fera parfaitemment l'affaire. 
 
 **Indicateurs de réussite :**  
 - Les utilisateurs du réseau cible perdent leur connexion.  
