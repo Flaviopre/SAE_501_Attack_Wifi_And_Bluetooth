@@ -69,6 +69,14 @@ Le script exécute cette commande en arrière-plan avec `subprocess.Popen`.
 Sur notre machine attaquante, nous allons lancer le script python en Super Utilisateur afin que le fichier aient tous les droits sur notre machine et puisse faire ce qu'il veut. 
 Pour l'interface choisie, nous utiliserons celle de base qui fera parfaitemment l'affaire. Evidemment, sur la machine attaquante, python3 et les modules nécessaires pour le script doivent être installé.
 Pour lancer le script, nous allons utiliser la commande suivante :
+```bash
+python3 Script_Python.py
+```
+![image](https://github.com/user-attachments/assets/79011b4f-119a-489a-94ac-10a67866ff85)
+
+Une fois execité, nous devons choisir l'interface que nous allons chosir afin d'émettre les trames et DDoS le réseau Wi-Fi. 
+On voit que l'on doit choisir un numéro et que ce numéro est le 0 :
+![image](https://github.com/user-attachments/assets/544c7c60-6635-4dce-b42c-a9b8901c3d19)
 
 
 
