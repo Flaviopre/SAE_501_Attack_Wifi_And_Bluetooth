@@ -74,10 +74,21 @@ python3 Script_Python.py
 ```
 ![image](https://github.com/user-attachments/assets/79011b4f-119a-489a-94ac-10a67866ff85)
 
-Une fois execité, nous devons choisir l'interface que nous allons chosir afin d'émettre les trames et DDoS le réseau Wi-Fi. 
+Une fois executé, nous devons choisir l'interface que nous allons chosir afin d'émettre les trames et DDoS le réseau Wi-Fi. 
 On voit que l'on doit choisir un numéro et que ce numéro est le 0 :
 ![image](https://github.com/user-attachments/assets/544c7c60-6635-4dce-b42c-a9b8901c3d19)
 
+Une fois ceci effectué, cela va scanner les différents Wi-Fi disponible afin de voir et de choisir lequel attaquer.
+On créera un réseau Wifi avec un point d'accès LinkSys WRT54GL, avec un réseau Wifi 2.4GHz nommée FAKE-Eduroam-Touche-PAS (comme le Rogue AP) sur le channel 1 avec une méthode d'authentification WPA2-PSK.
+Cela va faire une analyse des réseaux Wi-Fi avec le nom de chaque réseau Wifi, le BSSID associé, le canal du réseau et l'ESSID. 
+Etant donnée que nous sommes dans une salle bondée de réseau Wifi, on trouvera plusieurs types de réseau disponibles : 
+![image](https://github.com/user-attachments/assets/fea63c19-dc68-4bc4-bc71-a4507190d25b)
+
+Nous choisirons le numéro 0 qui est notre premier réseau Wi-FI disponible. Mais avant cela, un cleint va se connecter à notre réseau Wifi à l'aide du mot de passe testtest et qui va nous permettre de simuler un arrêt de service. Il sera connecté non pas à Internet mais seulement en local afin d'éviter les erreurs. On verra donc le client connecté :
+![image](https://github.com/user-attachments/assets/d2473b43-97fc-4220-ae53-8f4c0856c48e)
+
+On lancera maintenant l'attaque afin de voir ce que cela fait en choisssant le bon ESSID.
+![image](https://github.com/user-attachments/assets/1a4da302-df85-461a-82c6-f93acd8f9077)
 
 
 **Indicateurs de réussite :**  
