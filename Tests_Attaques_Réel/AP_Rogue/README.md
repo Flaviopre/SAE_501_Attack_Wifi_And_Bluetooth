@@ -142,6 +142,7 @@ Puis, on verra la présence du portail captif correspondant :
 ![image](https://github.com/user-attachments/assets/28917768-47af-4030-8d68-efbcbada3fd9)
 
 Une fois ceci fait, la personne visée essayera de rentrer des identfifiants et un mot de passe de son choix pour que l'on teste la récupération des identifiants login/mot de passe. Un terminal devrait s'ouvrir avec la récupération de ceci :
+![image](https://github.com/user-attachments/assets/e47a0c09-bf4c-4a16-a9b6-de3504cd55e0)
 
 ---
 
