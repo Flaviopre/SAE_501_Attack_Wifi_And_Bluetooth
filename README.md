@@ -1,4 +1,4 @@
-Sujet n°6 – Monitoring et hacking WiFi et Bluetooth
+Sujet n°6 – Monitoring et hacking WiFi et Bluetooth Réalisé par Flavio Fernandes De Araujo, Loris Glaise et Alexis Quinot
 
 
 Lors de l’un des TP WiFi, vous aurez l’occasion de visualiser les trames WiFi qui circulent entre un point d’accès et une carte réseau WiFi. La suite logique de ce TP serait de procéder à des tentatives d’attaque (déauthentification, désassociation, interception de mot de passe, etc….). Mais d’une part, le TP est déjà très complet, et d’autre part, cela peut avoir des conséquences si le sujet n’est pas suivi
