@@ -62,6 +62,7 @@ aireplay-ng --deauth 0 -a <BSSID> wlan0mon
 - `wlan0mon` : Interface Wi-Fi en mode surveillance.
 
 Le script exécute cette commande en arrière-plan avec `subprocess.Popen`.
+Le script est disponible dans les fichiers et il est commenté ligne par ligne avec les explications de ce qu'il se passe beaucoup plus en détail
 
 ---
 
@@ -90,6 +91,10 @@ Nous choisirons le numéro 0 qui est notre premier réseau Wi-FI disponible. Mai
 On lancera maintenant l'attaque afin de voir ce que cela fait en choisssant le bon ESSID.
 ![image](https://github.com/user-attachments/assets/1a4da302-df85-461a-82c6-f93acd8f9077)
 
+Sur le client, nous vérifierons l'adresse IPv4 et nous avons fait au préalable un ping ver notre point d'accès afin de voir quand la connexion va se couper au moment où le script est fait : 
+![image](https://github.com/user-attachments/assets/3f500f93-370c-4886-95b9-3e73100faa8f)
+
+On voit que nous avons au bout d'un moment le délai qui est dépassé donc le point d'accès ne répond pas puis après nous voyons une défaillance générale qui montre que l'attaque est réussi. 
 
 **Indicateurs de réussite :**  
 - Les utilisateurs du réseau cible perdent leur connexion.  
