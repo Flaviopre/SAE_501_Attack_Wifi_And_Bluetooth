@@ -66,7 +66,7 @@ Le script exécute cette commande en arrière-plan avec `subprocess.Popen`.
 ---
 
 ## 4. Phase de test
-Sur notre machine attaquante, nous allons lancer le script python en Super Utilisateur afin que le fichier aient tous les droits sur notre machine et puisse faire ce qu'il veut. Pour l'interface choisie, nous utiliserons celle de base qui fera parfaitemment l'affaire. 
+Sur notre machine attaquante, nous allons lancer le script python en Super Utilisateur afin que le fichier aient tous les droits sur notre machine et puisse faire ce qu'il veut. Pour l'interface choisie, nous utiliserons celle de base qui fera parfaitemment l'affaire. Evidemment, sur la machine attaquante, python3 et les modules nécessaires pour le script doivent être installé.   
 
 **Indicateurs de réussite :**  
 - Les utilisateurs du réseau cible perdent leur connexion.  
