@@ -1,7 +1,3 @@
-Voici un guide similaire à celui que vous avez partagé précédemment, adapté à l'attaque de DDoS Wi-Fi utilisant le script Python fourni :
-
----
-
 ## DDoS sur le Wi-Fi : Attaque de désauthentification avec aireplay-ng
 
 **1. Présentation de l'attaque DDoS Wi-Fi**  
