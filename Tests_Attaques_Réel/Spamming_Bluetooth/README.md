@@ -77,9 +77,19 @@ Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notificati
 
 3. **Déclenchement de l’attaque sur iPhone/iOS** :  
 Même principe que précédemment sauf que cette fois-ci, nous allons sur une autre page qui est la page de iOS Action Modals List (Les modales d’action sont des éléments d'interface utilisateur qui permettent de présenter des choix ou des interactions spécifiques dans une vue temporaire qui s’affiche par-dessus le contenu principal.) Elle contient différent appareil de l'écosystème Apple et qui vont demander de se connecter à chaque fois que l'appareil est allumé. La page de l'application contient ceci:
+
 ![image](https://github.com/user-attachments/assets/38879a48-dbcc-4153-8438-40b00c0e9acb)
 
 Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un iPhone si l'on reçoit bien les notifiations. Dans ce cas, nous voyons 2 notifications apparaitre. Une notification demandant le remplissage automatique du clavier Apple TV ainsi que une demande de connexion d'un "Appareil Bluetooth" qui requiert des informations supplémentaires pour se connecter au réseau. 
+
+![image](https://github.com/user-attachments/assets/8e5fdcb7-bb1b-4f4b-a49e-87ab4d71c56a)
+
+Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notification apparait. On a donc bien réussis
+
+3. **Tentative de déclenchement de l’attaque sur Android** :
+Même chose que pour iOS sur le principe car les appareils qui demanderont la connexion seront différent. en effet, Apple sont les premier aà avoitr implémenter cette fonctionnalité. Par la suite, Android suivis le pas et fit la même chose or beaucoup plus tard. En effet, seul les téléphones Android les plus récents ont cette fonction et donc les appareils qui demandent la connexion sont différents que l'écosystèmes Apple. On se rendra cette fois-ci sur 
+
+
 
 5. **Exemple d’effet sur la cible** :  
    - Une montre connectée peut afficher une avalanche de messages sur son écran.  
