@@ -66,13 +66,19 @@ Configurez un périphérique Bluetooth pour observer l’impact. Dans notre cas,
 Assurez-vous que l’appareil cible est à portée et en mode découverte BLE, où simplement avec le Bluetooth d'allumé car il sera automatiquement activé si le Bluetooth l'est aussi.   
 
 2. **Déclenchement de l’attaque** :  
-   - Lancez l’envoi des notifications via **Bluetooth LE Spam**.
+Lancez l’envoi des notifications via **Bluetooth LE Spam**. Dans notre cas nous nous rendrons là où toutes les attaques sont stockées et nous allons séléctionner pour commencer le sapm de Notification Windows. Pour cela, on se rend dans la section Kithen SInk Collection qui regroupe un grand nombre d'attaques disponible puis on se rendra dans Swift Pairing List qui contient un certain nombre de Device qui seront les appareils qui tentent de se connecter.
+![image](https://github.com/user-attachments/assets/1fa3abb9-6f47-4cac-a66b-7c44553448d9)
+
+Une fois cela séléctionner on peut appuyer sur le Bouton Play tout en séléctionnent la liste afin dee répééter ce Spam avec différents Devices. Sur notre ordinateur WIndows avec le bluetooth allumé, on obtient des notifications demandant de se connecter à l'appareil portant le nom de Device X avec X un numéro quelconque : 
+![image](https://github.com/user-attachments/assets/2be61f94-5c53-43df-a4bd-86738b30c6db)
+
+
    - Observez la réponse de l’appareil cible. Certains signes typiques incluent :  
      - Blocage ou ralentissement de l’interface utilisateur.  
      - Batterie qui se vide rapidement à cause du traitement des requêtes.  
      - Déconnexion ou désactivation du Bluetooth.  
 
-3. **Exemple d’effet sur la cible** :  
+4. **Exemple d’effet sur la cible** :  
    - Une montre connectée peut afficher une avalanche de messages sur son écran.  
    - Un casque Bluetooth peut perdre la connexion avec son appareil maître.  
 
