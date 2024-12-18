@@ -25,24 +25,25 @@ L’application permet d’automatiser plusieurs étapes clés :
 
 #### Étapes préparatoires :  
 1. **Téléchargement et installation** :  
-   - Téléchargez l’APK de l’application **Bluetooth LE Spam** depuis une source fiable (par exemple, un dépôt GitHub ou une archive pour chercheurs en sécurité).  
-   - Activez l’installation d’applications depuis des sources inconnues dans les paramètres Android.  
-   - Installez l’APK et vérifiez que les autorisations root sont bien configurées.  
+Téléchargez l’APK de l’application **Bluetooth LE Spam** depuis une source fiable (par exemple, un dépôt GitHub ou une archive pour chercheurs en sécurité).  
+Activez l’installation d’applications depuis des sources inconnues dans les paramètres Android.  
+Installez l’APK et vérifiez que les autorisations root sont bien configurées.
+     
 
 2. **Configuration du smartphone Android** :  
-   - Activez le Bluetooth sur l’appareil.  
-   - Placez-vous dans une zone où des appareils BLE sont activés et accessibles.  
+Activez le Bluetooth sur l’appareil.
+Placez-vous dans une zone où des appareils BLE sont activés et accessibles.  
 
-3. **Environnement cible** :  
-   - Assurez-vous d’être à proximité des appareils que vous souhaitez cibler. La portée BLE est généralement de 10 à 30 mètres, en fonction de la puissance du signal et des obstacles.  
+4. **Environnement cible** :  
+Assurez-vous d’être à proximité des appareils que vous souhaitez cibler. La portée BLE est généralement de 10 à 30 mètres, en fonction de la puissance du signal et des obstacles.  
 
 ---
 
 ### 3. Étapes de l’attaque  
 
 #### 3.1 Découverte des périphériques BLE  
-- Lancez l’application **Bluetooth LE Spam**.  
-- Utilisez la fonction de balayage BLE pour détecter les périphériques à proximité.  
+Lancez l’application **Bluetooth LE Spam** qui est disponible ici.  
+Utilisez la fonction de balayage BLE pour détecter les périphériques à proximité.  
 
 
 #### 3.3 Envoi massif de notifications  
