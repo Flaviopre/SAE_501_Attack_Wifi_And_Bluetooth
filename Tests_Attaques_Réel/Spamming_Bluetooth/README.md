@@ -86,9 +86,12 @@ Une fois ceci effectué, on séléctionnera Play comme précédemment en choisis
 
 Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notification apparait. On a donc bien réussis
 
-3. **Tentative de déclenchement de l’attaque sur Android** :
-Même chose que pour iOS sur le principe car les appareils qui demanderont la connexion seront différent. en effet, Apple sont les premier aà avoitr implémenter cette fonctionnalité. Par la suite, Android suivis le pas et fit la même chose or beaucoup plus tard. En effet, seul les téléphones Android les plus récents ont cette fonction et donc les appareils qui demandent la connexion sont différents que l'écosystèmes Apple. On se rendra cette fois-ci sur 
+4. **Tentative de déclenchement de l’attaque sur Android** :
+Même chose que pour iOS sur le principe car les appareils qui demanderont la connexion seront différent. en effet, Apple sont les premier aà avoitr implémenter cette fonctionnalité. Par la suite, Android suivis le pas et fit la même chose or beaucoup plus tard. En effet, seul les téléphones Android les plus récents ont cette fonction et donc les appareils qui demandent la connexion sont différents que l'écosystèmes Apple. On se rendra cette fois-ci sur Fast Pairing Device List qui comme son nom l'indique répertorie les différents accessoires qui sont compatibles avec Android pour l'appairage rapide. La liste ressemble à ceci :
 
+![image](https://github.com/user-attachments/assets/fae1fc17-909a-4c9f-a517-9cd71bfea5ce)
+
+Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un Android que l'on a cette notification qui apparâit : 
 
 
 5. **Exemple d’effet sur la cible** :  
