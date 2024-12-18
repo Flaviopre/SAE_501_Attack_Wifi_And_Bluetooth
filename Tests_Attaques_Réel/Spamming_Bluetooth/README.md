@@ -42,28 +42,28 @@ Assurez-vous d’être à proximité des appareils que vous souhaitez cibler. La
 ### 3. Étapes de l’attaque  
 
 #### 3.1 Découverte des périphériques BLE  
-Lancez l’application **Bluetooth LE Spam** qui est disponible ici.  
+Lancez l’application **Bluetooth LE Spam** qui est disponible juste en haut Bluetooth_Spam_BLE.apk.
 Utilisez la fonction de balayage BLE pour détecter les périphériques à proximité.  
 
 
 #### 3.3 Envoi massif de notifications  
-- Utilisez l’application pour envoyer un flot continu de notifications via le protocole GATT (Generic Attribute Profile).  
-- Configurez les paramètres de l’attaque :  
-  - **Intervalle d’envoi** : Pour augmenter l’impact, réduisez l’intervalle entre les notifications.  
-  - **Contenu des notifications** : Certains appareils affichent les messages, d'autres les ignorent. Vous pouvez personnaliser le texte ou envoyer des valeurs aléatoires.  
-- L’application **Bluetooth LE Spam** gère ces étapes automatiquement en exploitant la vulnérabilité des services GATT de l’appareil cible.  
+Utilisez l’application pour envoyer un flot continu de notifications via le protocole GATT (Generic Attribute Profile).  
+Configurez les paramètres de l’attaque :  
+**Intervalle d’envoi** : Pour augmenter l’impact, réduisez l’intervalle entre les notifications.  
+**Contenu des notifications** : Certains appareils affichent les messages, d'autres les ignorent. Vous pouvez personnaliser le texte ou envoyer des valeurs aléatoires.  
+L’application **Bluetooth LE Spam** gère ces étapes automatiquement en exploitant la vulnérabilité des services GATT de l’appareil cible.  
 
 #### Indicateurs de succès :  
-- Le périphérique cible affiche un grand nombre de notifications ou ralentit considérablement.  
-- Certains appareils peuvent redémarrer ou désactiver temporairement leur Bluetooth pour se protéger.  
+Le périphérique cible affiche un grand nombre de notifications ou ralentit considérablement.  
+Certains appareils peuvent redémarrer ou désactiver temporairement leur Bluetooth pour se protéger.  
 
 ---
 
 ### 4. Phase de test  
 
 1. **Configuration de l’environnement test** :  
-   - Configurez un périphérique Bluetooth pour observer l’impact. Dans notre cas, nous utiliserons un téléphone Android, un iPhone ainsi que un ordinateur Windows.
-   - Assurez-vous que l’appareil cible est à portée et en mode découverte BLE.  
+Configurez un périphérique Bluetooth pour observer l’impact. Dans notre cas, nous utiliserons un téléphone Android, un iPhone ainsi que un ordinateur Windows.
+Assurez-vous que l’appareil cible est à portée et en mode découverte BLE, où simplement avec le Bluetooth d'allumé car il sera automatiquement activé si le Bluetooth l'est aussi.   
 
 2. **Déclenchement de l’attaque** :  
    - Lancez l’envoi des notifications via **Bluetooth LE Spam**.
