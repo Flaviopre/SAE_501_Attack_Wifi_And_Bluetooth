@@ -69,23 +69,24 @@ Assurez-vous que l’appareil cible est à portée et en mode découverte BLE, o
 Lancez l’envoi des notifications via **Bluetooth LE Spam**. Dans notre cas nous nous rendrons là où toutes les attaques sont stockées et nous allons séléctionner pour commencer le sapm de Notification Windows. Pour cela, on se rend dans la section Kitchen Sink Collection (terme souvent utilisé dans le contexte du développement ou des environnements de démonstration pour désigner un ensemble exhaustif d'exemples, de fonctions ou de tests dans un seul package) qui regroupe un grand nombre d'attaques disponible puis on se rendra dans Swift Pairing List (Au lieu de chercher manuellement les appareils à proximité, la Swift Pairing List affiche automatiquement les appareils Bluetooth disponibles lorsque certains critères sont remplis.) qui contient un certain nombre de Device qui seront les appareils qui tentent de se connecter.
 ![image](https://github.com/user-attachments/assets/1fa3abb9-6f47-4cac-a66b-7c44553448d9)
 
-Une fois cela séléctionner on peut appuyer sur le Bouton Play tout en séléctionnent la liste afin dee répééter ce Spam avec différents Devices. Sur notre ordinateur WIndows avec le bluetooth allumé, on obtient des notifications demandant de se connecter à l'appareil portant le nom de Device X avec X un numéro quelconque : 
+Une fois cela séléctionner on peut appuyer sur le Bouton Play tout en séléctionnent la liste afin dee répééter ce Spam avec différents Devices. Sur notre ordinateur Windows avec le bluetooth allumé, on obtient des notifications demandant de se connecter à l'appareil portant le nom de Device X avec X un numéro quelconque : 
 
 ![image](https://github.com/user-attachments/assets/2be61f94-5c53-43df-a4bd-86738b30c6db)
 
 Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notification apparait. On a donc bien réussis
 
 3. **Déclenchement de l’attaque sur iPhone/iOS** :  
-Même principe que précédemment sauf que cette fois-ci, nous allons sur une autre page  
+Même principe que précédemment sauf que cette fois-ci, nous allons sur une autre page qui est la page de iOS Action Modals List (Les modales d’action sont des éléments d'interface utilisateur qui permettent de présenter des choix ou des interactions spécifiques dans une vue temporaire qui s’affiche par-dessus le contenu principal.) Elle contient différent appareil de l'écosystème Apple et qui vont demander de se connecter à chaque fois que l'appareil est allumé. La page de l'application contient ceci:
+![image](https://github.com/user-attachments/assets/38879a48-dbcc-4153-8438-40b00c0e9acb)
 
-   - Observez la réponse de l’appareil cible. Certains signes typiques incluent :  
-     - Blocage ou ralentissement de l’interface utilisateur.  
-     - Batterie qui se vide rapidement à cause du traitement des requêtes.  
-     - Déconnexion ou désactivation du Bluetooth.  
 
-4. **Exemple d’effet sur la cible** :  
+
+5. **Exemple d’effet sur la cible** :  
    - Une montre connectée peut afficher une avalanche de messages sur son écran.  
-   - Un casque Bluetooth peut perdre la connexion avec son appareil maître.  
+   - Un casque Bluetooth peut perdre la connexion avec son appareil maître.
+   - Blocage ou ralentissement de l’interface utilisateur.  
+   - Batterie qui se vide rapidement à cause du traitement des requêtes.  
+   - Déconnexion ou désactivation du Bluetooth.    
 
 ---
 
