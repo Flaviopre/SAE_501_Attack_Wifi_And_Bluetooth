@@ -91,8 +91,11 @@ Même chose que pour iOS sur le principe car les appareils qui demanderont la co
 
 ![image](https://github.com/user-attachments/assets/fae1fc17-909a-4c9f-a517-9cd71bfea5ce)
 
-Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un Android que l'on a cette notification qui apparâit : 
+Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un Android que l'on a cette notification qui apparâit :
 
+![image](https://github.com/user-attachments/assets/590f9eb7-b764-4cdf-9dd9-a0ad9cba251b)
+
+A savoir que dans le cas de l'Adroid, une sécurité permet d'envoyer une seul notification comme celle-ci dans une période de temps de 5 min. 
 
 5. **Exemple d’effet sur la cible** :  
    - Une montre connectée peut afficher une avalanche de messages sur son écran.  
@@ -100,7 +103,7 @@ Une fois ceci effectué, on séléctionnera Play comme précédemment en choisis
    - Blocage ou ralentissement de l’interface utilisateur.  
    - Batterie qui se vide rapidement à cause du traitement des requêtes.  
    - Déconnexion ou désactivation du Bluetooth.    
-
+     
 ---
 
 ### 5. Contre-mesures  
