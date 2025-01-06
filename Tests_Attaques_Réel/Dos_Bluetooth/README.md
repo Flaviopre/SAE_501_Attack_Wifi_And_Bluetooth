@@ -40,8 +40,8 @@ L’attaque de déni de service (DoS) Bluetooth vise à perturber le fonctionnem
    ```bash
    hcitool scan
    ```  
-   Vous obtiendrez une liste des adresses MAC des appareils détectés.  
-
+   Vous obtiendrez une liste des adresses MAC des appareils détectés. On cherchera dans notre cas des écouteurs sans fil Apple Airpods Pro 2
+   
 ---
 
 ### 3. Étapes de l’attaque  
