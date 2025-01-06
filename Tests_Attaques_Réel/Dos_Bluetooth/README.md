@@ -20,17 +20,20 @@ L’attaque de déni de service (DoS) Bluetooth vise à perturber le fonctionnem
 
 #### Étapes préparatoires :  
 1. **Installation des outils nécessaires** :  
-   Assurez-vous que les outils Bluetooth requis sont installés :  
+   Assurez-vous que les outils Bluetooth requis sont installés dans notre cas, elle est installée de base sur l'OS. :  
    ```bash
    sudo apt-get install bluez
    ```  
 
 2. **Activation de l’interface Bluetooth** :  
-   Vérifiez que votre interface Bluetooth est activée avec :  
+   Vérifiez que votre interface Bluetooth est activée avec la commande suivante qui va nous permettre de voir voir les paramètres de notre carte Bluetooth :  
    ```bash
    hciconfig hci0 up
    hciconfig -a
-   ```  
+   ```
+   ![image](https://github.com/user-attachments/assets/15f5a4b2-c940-415f-a323-d30a5badcfa4)
+
+   On voit que l'interface Bluetooth tel que le BUS qui est dans notre cass USB, ainsi que l'adresse MAC, les différents MTU ( Maximal Transmission Unit ) avec l'état de la carte qui est démarré dans notre cas UP et qui est scanné avec RUNNING PSCAN. Le nombre de bits reçus et envoyés grâce à celle ci ainsi que le type de paquet échangés etc.
 
 3. **Scan des périphériques à proximité** :  
    Lancez un scan Bluetooth pour détecter les appareils dans votre environnement :  
