@@ -186,15 +186,21 @@ Une fois le script executé, un texte apparait pour démistifier que le script e
 Ensuite, cela va faire un scan réseau afin de voire quelle appareil cibler dans notre cas les Airpods : 
 ![image](https://github.com/user-attachments/assets/90eabde5-54f1-4892-8cfc-3e0a6445fe0d)
 
-Ensuite, nous choisirons l'adresse MAC que l'on cible en choissiant le numéro associé qui est le 0 dans notre cas. Puis nous choisirons la taille des paquets que nous voulons envoyés qui est de 600 dans notre cas pour surcharger le réseau ainsi que le nombre de paquets envoyés qui sera de 100 dans notre cas. 
+Ensuite, nous choisirons l'adresse MAC que l'on cible en choissiant le numéro associé qui est le 0 dans notre cas. Puis nous choisirons la taille des paquets que nous voulons envoyés qui est de 600 dans notre cas pour surcharger le réseau ainsi que le nombre de paquets envoyés qui sera de 100 dans notre cas.
+![image](https://github.com/user-attachments/assets/071bdb12-124a-49f3-8aaf-04bab9fd18e3)
+
+Ensuite, nous pouvons connecter nos écouteurs à notre téléphone et nous allons mettre de la musique afin de tester si cela coupe la connexion. Une fois ceci fait, on va lancer l'attaque : 
+![image](https://github.com/user-attachments/assets/75b2da32-a7a7-4ad8-af3c-35143d978ab4)
+
+Puis sur nos écouteurs vont couper la musique et se déconnecter de notre téléphone en affichant que les écouteurs sont utilisé sur un autre appareil :
+![image](https://github.com/user-attachments/assets/64f22978-bc6a-4fae-b660-3dd6b10f9ebc)
+![image](https://github.com/user-attachments/assets/aa564a16-c272-44e1-bc8c-4a56c6a71723)
+
+Notre attaque a donc fonctionné !!
 
 ---
 
 ### 4. Phase de test  
-
-1. **Configuration de l’environnement de test** :  
-   - Un smartphone Android, un iPhone ou un PC avec Bluetooth activé.  
-   - Lancez l’attaque en utilisant une machine Linux avec Bluetooth fonctionnel.  
 
 2. **Indicateurs de succès** :  
    - Le périphérique cible affiche des erreurs de connexion ou des notifications de déconnexion.  
