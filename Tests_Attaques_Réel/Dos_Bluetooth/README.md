@@ -1,3 +1,4 @@
+
 ### Attaque de Déni de Service (DoS) Bluetooth  
 
 ---
@@ -173,13 +174,19 @@ if __name__ == '__main__':
         time.sleep(0.1)  # Pause courte
         print('\n[*] Aborted')  # Indique que l'utilisateur a arrêté le programme
         exit(0)  # Termine proprement
-    except Exception as e:
+    except Exception a e:
         time.sleep(0.1)  # Pause courte
         print('[!] ERROR: ' + str(e))  # Affiche toute erreur imprévue
 ```
 
-#### 3.3 Exécution multi-threadée  
-Le script crée plusieurs threads pour intensifier l’attaque, ce qui se traduit par une surcharge du périphérique cible.  
+#### 3.3 Exécution attaque
+Une fois le script executé, un texte apparait pour démistifier que le script est encadré dans un environnement de test et on confirmera avec y :
+![image](https://github.com/user-attachments/assets/51307b64-cbfd-4b32-b8c1-5e40ca790f26)
+
+Ensuite, cela va faire un scan réseau afin de voire quelle appareil cibler dans notre cas les Airpods : 
+![image](https://github.com/user-attachments/assets/90eabde5-54f1-4892-8cfc-3e0a6445fe0d)
+
+Ensuite, nous choisirons l'adresse MAC que l'on cible en choissiant le numéro associé qui ets le 0 dans notre cas. Puis nous choisirions
 
 ---
 
