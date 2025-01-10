@@ -186,7 +186,7 @@ Une fois le script executé, un texte apparait pour démistifier que le script e
 Ensuite, cela va faire un scan réseau afin de voire quelle appareil cibler dans notre cas les Airpods : 
 ![image](https://github.com/user-attachments/assets/90eabde5-54f1-4892-8cfc-3e0a6445fe0d)
 
-Ensuite, nous choisirons l'adresse MAC que l'on cible en choissiant le numéro associé qui ets le 0 dans notre cas. Puis nous choisirions
+Ensuite, nous choisirons l'adresse MAC que l'on cible en choissiant le numéro associé qui est le 0 dans notre cas. Puis nous choisirons la taille des paquets que nous voulons envoyés qui est de 600 dans notre cas pour surcharger le réseau ainsi que le nombre de paquets envoyés qui sera de 100 dans notre cas. 
 
 ---
 
