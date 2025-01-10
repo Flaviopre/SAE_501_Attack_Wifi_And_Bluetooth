@@ -65,7 +65,7 @@ Le script permet d’automatiser la découverte, la configuration, et l’envoi 
 
 #### 3.2 Commande générée par le script :  
 Une fois configuré, le script exécute des commandes bash. Voici un détail complet de ce script python (il est disponible dans les fichiers contenue dans ce dossier Bluetooth_Carjacking).
-'''python
+   ```python
 import os  # Module pour exécuter des commandes système
 import threading  # Module pour la gestion des threads
 import time  # Module pour manipuler les pauses temporelles
@@ -176,7 +176,8 @@ if __name__ == '__main__':
     except Exception as e:
         time.sleep(0.1)  # Pause courte
         print('[!] ERROR: ' + str(e))  # Affiche toute erreur imprévue
-'''
+```
+
 #### 3.3 Exécution multi-threadée  
 Le script crée plusieurs threads pour intensifier l’attaque, ce qui se traduit par une surcharge du périphérique cible.  
 
