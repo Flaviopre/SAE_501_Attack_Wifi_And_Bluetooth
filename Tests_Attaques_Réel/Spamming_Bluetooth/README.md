@@ -67,7 +67,8 @@ Assurez-vous que l’appareil cible est à portée et en mode découverte BLE, o
 
 2. **Déclenchement de l’attaque sur Windows** :  
 Lancez l’envoi des notifications via **Bluetooth LE Spam**. Dans notre cas nous nous rendrons là où toutes les attaques sont stockées et nous allons séléctionner pour commencer le sapm de Notification Windows. Pour cela, on se rend dans la section Kitchen Sink Collection (terme souvent utilisé dans le contexte du développement ou des environnements de démonstration pour désigner un ensemble exhaustif d'exemples, de fonctions ou de tests dans un seul package) qui regroupe un grand nombre d'attaques disponible puis on se rendra dans Swift Pairing List (Au lieu de chercher manuellement les appareils à proximité, la Swift Pairing List affiche automatiquement les appareils Bluetooth disponibles lorsque certains critères sont remplis.) qui contient un certain nombre de Device qui seront les appareils qui tentent de se connecter.
-![image](https://github.com/user-attachments/assets/1fa3abb9-6f47-4cac-a66b-7c44553448d9)
+![image](https://github.com/user-attachments/assets/30591ede-c428-4a2a-b60b-a411d4d00661)
+
 
 Une fois cela séléctionner on peut appuyer sur le Bouton Play tout en séléctionnent la liste afin dee répééter ce Spam avec différents Devices. Sur notre ordinateur Windows avec le bluetooth allumé, on obtient des notifications demandant de se connecter à l'appareil portant le nom de Device X avec X un numéro quelconque : 
 
@@ -78,7 +79,8 @@ Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notificati
 3. **Déclenchement de l’attaque sur iPhone/iOS** :  
 Même principe que précédemment sauf que cette fois-ci, nous allons sur une autre page qui est la page de iOS Action Modals List (Les modales d’action sont des éléments d'interface utilisateur qui permettent de présenter des choix ou des interactions spécifiques dans une vue temporaire qui s’affiche par-dessus le contenu principal.) Elle contient différent appareil de l'écosystème Apple et qui vont demander de se connecter à chaque fois que l'appareil est allumé. La page de l'application contient ceci:
 
-![image](https://github.com/user-attachments/assets/38879a48-dbcc-4153-8438-40b00c0e9acb)
+![image](https://github.com/user-attachments/assets/8318e4d2-4e99-4b7c-8730-4336f9c81973)
+
 
 Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un iPhone si l'on reçoit bien les notifiations. Dans ce cas, nous voyons 2 notifications apparaitre. Une notification demandant le remplissage automatique du clavier Apple TV ainsi que une demande de connexion d'un "Appareil Bluetooth" qui requiert des informations supplémentaires pour se connecter au réseau. 
 
@@ -89,7 +91,8 @@ Si l'on tente de fermer la fenêtre alors, elle se ferme et une autre notificati
 4. **Tentative de déclenchement de l’attaque sur Android** :
 Même chose que pour iOS sur le principe car les appareils qui demanderont la connexion seront différent. en effet, Apple sont les premier aà avoitr implémenter cette fonctionnalité. Par la suite, Android suivis le pas et fit la même chose or beaucoup plus tard. En effet, seul les téléphones Android les plus récents ont cette fonction et donc les appareils qui demandent la connexion sont différents que l'écosystèmes Apple. On se rendra cette fois-ci sur Fast Pairing Device List qui comme son nom l'indique répertorie les différents accessoires qui sont compatibles avec Android pour l'appairage rapide. La liste ressemble à ceci :
 
-![image](https://github.com/user-attachments/assets/fae1fc17-909a-4c9f-a517-9cd71bfea5ce)
+![image](https://github.com/user-attachments/assets/781cdb45-1b65-419b-9312-26c50964bbba)
+
 
 Une fois ceci effectué, on séléctionnera Play comme précédemment en choisissant la liste afin de séléctionner les éléments de cette liste et on vérifiera sur un Android que l'on a cette notification qui apparâit :
 
