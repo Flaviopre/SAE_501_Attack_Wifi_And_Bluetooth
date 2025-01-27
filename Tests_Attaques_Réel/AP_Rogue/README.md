@@ -89,7 +89,12 @@ ifconfig wlp6s0 192.168.1.1/24
 #### 3.3 **Configurer Apache2 pour héberger la page clonée**
 
 #### **CCopie du site d'authentification de l'IUT**
-Nous utiliserons pour copier la page d'auhentification de l'IUT, httpcrack
+Nous utiliserons pour copier la page d'auhentification de l'IUT, httcrack.  Il permet de télécharger un site web complet pour une consultation hors ligne. Cela permet de reproduire localement un site à des fins d'étude ou d'archivage, avec les fichiers HTML, images et autres ressources. On utilisera donc cette outil en renseignant : 
+
+```bash
+httcrack <url_a_copier_>
+```
+
 
 #### **Configuration rajouté du fichier 000-default.conf**
 Le fichier 000-default.conf est un fichier de configuration par défaut pour Apache. Il définit un VirtualHost de base qui sert les fichiers du répertoire /var/www/html sur le port HTTP (80).
