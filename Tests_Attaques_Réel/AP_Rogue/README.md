@@ -88,6 +88,9 @@ ifconfig wlp6s0 192.168.1.1/24
 
 #### 3.3 **Configurer Apache2 pour héberger la page clonée**
 
+#### **CCopie du site d'authentification de l'IUT**
+Nous utiliserons pour copier la page d'auhentification de l'IUT, httpcrack
+
 #### **Configuration rajouté du fichier 000-default.conf**
 Le fichier 000-default.conf est un fichier de configuration par défaut pour Apache. Il définit un VirtualHost de base qui sert les fichiers du répertoire /var/www/html sur le port HTTP (80).
 
